@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { WeatherforecastRoutingModule } from './weatherforecast-routing.module';
-
-
+import { GeneralPagesRoutingModule } from './general-pages-routing.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +8,9 @@ import { WeatherforecastRoutingModule } from './weatherforecast-routing.module';
   ],
   imports: [
     CommonModule,
-    WeatherforecastRoutingModule
+    GeneralPagesRoutingModule
   ],
   providers: [
   ],
 })
-export class WeatherforecastModule { }
+export class GeneralPagesModule { }

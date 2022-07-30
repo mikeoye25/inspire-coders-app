@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WeatherforecastComponent } from './weatherforecast/weatherforecast/weatherforecast.component';
-
 
 const weatherforecastModule = () => import('./weatherforecast/weatherforecast-routing.module').then(x => x.WeatherforecastRoutingModule);
+const generalPagesModule = () => import('./general-pages/general-pages-routing.module').then(x => x.GeneralPagesRoutingModule);
 
 const routes: Routes = [
+  { 
+      path: '', 
+      loadChildren: generalPagesModule
+  },
   { 
       path: 'weatherforecast', 
       loadChildren: weatherforecastModule
   },
-  { path: '', redirectTo: 'weatherforecast', pathMatch: 'full' }
+  { 
+      path: '**', 
+      redirectTo: '', 
+      pathMatch: 'full' 
+  }
 ];
 
 @NgModule({
