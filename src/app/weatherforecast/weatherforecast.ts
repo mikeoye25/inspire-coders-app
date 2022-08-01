@@ -9,6 +9,13 @@ export interface WeatherForecast {
     summary?: string;
 }
 
+export interface Employee {
+    id?: number;
+    name?: string;
+    description?: string;
+    email?: string;
+}
+
 export interface IApiUrls {
     readonly WeatherForecast: string;
 }

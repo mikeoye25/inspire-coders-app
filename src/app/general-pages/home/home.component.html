@@ -1,19 +1,56 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <h1>Inspire Coders</h1>
-      <span class="menu-spacer"></span>
-      <div>
-        <a mat-button [routerLink]="'/accounts'"> Home </a>
-        <a mat-button [routerLink]="'/create-account'"> About </a>
-        <a mat-button [routerLink]="'/contacts'"> How it works </a>
-        <a mat-button [routerLink]="'/create-contact'"> Contact </a>
-        <a mat-button [routerLink]="'/activities'"> Signup </a>
-        <a mat-button [routerLink]="'/create-activity'"> Login </a>
-      </div>
-    </mat-toolbar-row>
-</mat-toolbar>
 
-<div style="margin: 20px;">
-    Would you like to learn to code for free?
-    <p style="margin-top: 50px; font-weight: bold;">Coming soon!!!</p>
+<div class="row">
+  <div class="col">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand img-logo" href="#">Inspire Coders</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNav"
+          aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapseNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About </a>
+            </li>
+            <li class="nav-item how-it-works">
+              <a class="nav-link" href="#">How It Works </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link signup-btn" href="#">Signup </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link login-btn" href="#">Login </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="row banner-section">
+    <div class="col-md-6 col-xs-12 banner-section-text">
+      <div class="banner-section-text-top">
+        WOULD YOU LIKE TO LEARN TO CODE FOR FREE?
+      </div>
+      <div class="banner-section-text-mid">
+        Inspire coders offers the best on hands practice in the world of programming. 
+        The training is for complete beginners who want to learn the basics of software development.
+      </div>
+      <div>
+        <a class="btn btn-info justify-content-center text-center joinus-btn" href="#">JOIN US NOW </a>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12 banner-section-image">
+      <img src="../../../assets/images/banner-image.png">
+    </div>
+  </div>
+  <div class="col">
+    
+  </div>
 </div>
