@@ -4,7 +4,6 @@ import { GeneralPagesRoutingModule } from './general-pages-routing.module';
 
 @NgModule({
   declarations: [
-    
   ],
   imports: [
     CommonModule,
