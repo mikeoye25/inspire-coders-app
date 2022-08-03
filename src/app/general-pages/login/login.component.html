@@ -31,7 +31,7 @@
                         <a class="nav-link" href="#">Contact </a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link login-btn" [routerLink]="loginUrl">Login </a>
+                        <a class="nav-link login-btn" [routerLink]="signupUrl">Sign up </a>
                         </li>
                     </ul>
                     </div>
@@ -40,50 +40,13 @@
             </div>
             <div class="p-4 ms-5">
                 <div class="form-top">
-                    Add your Information to Register
+                    Login to your account
                 </div>
                 <div class="form-mid">
                     <form [formGroup]="form" (ngSubmit)="submit()">
                         <div class="row g-3">
 
-                            <div class="form-group col-md-6">
-                                <label for="firstname">First Name</label>
-                                <input 
-                                    formControlName="firstname"
-                                    id="firstname" 
-                                    type="text" 
-                                    class="form-control">
-                                <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="alert alert-danger">
-                                    <div *ngIf="f['firstname'].errors && f['firstname'].errors['required']">First Name is required.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group col-md-6">
-                                <label for="lastname">Last Name</label>
-                                <input 
-                                    formControlName="lastname"
-                                    id="lastname" 
-                                    type="text" 
-                                    class="form-control">
-                                <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="alert alert-danger">
-                                    <div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">Last name is required.</div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group col-md-6">
-                                <label for="email">Email Address</label>
-                                <input 
-                                    formControlName="email"
-                                    id="email" 
-                                    type="text" 
-                                    class="form-control">
-                                <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
-                                    <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
-                                    <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
-                                </div>
-                            </div>
-
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                                 <label for="username">Username</label>
                                 <input 
                                     formControlName="username"
@@ -96,7 +59,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                                 <label for="password">Password</label>
                                 <input 
                                     formControlName="password"
@@ -109,31 +72,16 @@
                                 </div>
                             </div>
                             
-                            <div class="form-group col-md-6">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input 
-                                    formControlName="confirmPassword"
-                                    id="confirmPassword" 
-                                    type="text" 
-                                    class="form-control">
-                                <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="alert alert-danger">
-                                    <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Confirm Password is required.</div>
-                                </div>
-                            </div>
-                            
                             <div class="form-group col-md-6 mt-4">
                                 <input type="checkbox" 
-                                    formControlName="acceptTerms" 
+                                    formControlName="keepMeLoggedIn" 
                                     class="form-check-input me-2" 
-                                    [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" /> 
-                                <label for="acceptTerms" class="form-check-label">I accept the terms & Conditions</label>
-                                <div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback">
-                                    Accept Terms is required
-                                </div>
+                                    [ngClass]="{ 'is-invalid': submitted && f['keepMeLoggedIn'].errors }" /> 
+                                <label for="keepMeLoggedIn" class="form-check-label">Keep me logged in</label>
                             </div>
                             
                             <div class="form-group col-md-6">
-                                <button class="btn btn-primary float-end" [disabled]="form.invalid" type="submit">Register</button>
+                                <button class="btn btn-primary float-end" [disabled]="form.invalid" type="submit">Login</button>
                             </div>
                         </div>
                     </form>

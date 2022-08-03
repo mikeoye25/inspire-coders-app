@@ -15,13 +15,15 @@ import { AppComponent } from './app.component';
 import { WeatherforecastComponent } from './weatherforecast/weatherforecast/weatherforecast.component';
 import { HomeComponent } from './general-pages/home/home.component';
 import { SignupComponent } from './general-pages/signup/signup.component';
+import { LoginComponent } from './general-pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherforecastComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
