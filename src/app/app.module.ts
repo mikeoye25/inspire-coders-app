@@ -25,6 +25,7 @@ import { RightSidebarComponent } from './layout/shared/right-sidebar/right-sideb
 import { FooterComponent } from './layout/shared/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
+import { StatisticsWidget1Component } from './shared/widget/statistics-widget1/statistics-widget1.component';
 
 @NgModule({
   declarations: [

@@ -4,6 +4,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardsRoutingModule } from './dashboards-routing.module';
+import { WidgetModule } from '../../shared/widget/widget.module';
 
 
 
@@ -15,7 +16,7 @@ import { DashboardsRoutingModule } from './dashboards-routing.module';
     CommonModule,
     NgApexchartsModule,
     NgbDropdownModule,
-    // WidgetModule,
+    WidgetModule,
     DashboardsRoutingModule
   ]
 })
