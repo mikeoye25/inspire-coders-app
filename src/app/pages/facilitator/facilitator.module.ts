@@ -5,12 +5,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { AdvancedTableModule } from '../../shared/advanced-table/advanced-table.module';
 import { FacilitatorRoutingModule } from './facilitator-routing.module';
+import { FacilitatorAddComponent } from './facilitator-add/facilitator-add.component';
 
 
 
 @NgModule({
   declarations: [
-    FacilitatorComponent
+    FacilitatorComponent,
+    FacilitatorAddComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { FacilitatorRoutingModule } from './facilitator-routing.module';
     FacilitatorRoutingModule
   ],
   exports: [
-    FacilitatorComponent
+    FacilitatorComponent,
+    FacilitatorAddComponent
   ]
 })
 export class FacilitatorModule { }

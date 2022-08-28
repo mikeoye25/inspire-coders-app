@@ -11,7 +11,7 @@ import { Facilitator } from '../facilitator-model';
 })
 export class FacilitatorComponent implements OnInit {
 
-  isEmpty: boolean = false;
+  isEmpty: boolean = true;
   public addFacilitatorUrl: string = "add";
 
   records: Facilitator[] = [];
