@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -14,6 +13,10 @@ const routes: Routes = [
   {
     path: 'facilitator',
     loadChildren: () => import('./facilitator/facilitator.module').then(m => m.FacilitatorModule)
+  },
+  {
+    path: 'forum',
+    loadChildren: () => import('./forum/forum.module').then(m => m.ForumModule)
   }
 ];
 

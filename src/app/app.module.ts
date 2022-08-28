@@ -18,6 +18,7 @@ import { LayoutModule } from './layout/layout.module';
 import { GeneralPagesModule } from './general-pages/general-pages.module';
 import { CourseModule } from './pages/course/course.module';
 import { FacilitatorModule } from './pages/facilitator/facilitator.module';
+import { ForumModule } from './pages/forum/forum.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FacilitatorModule } from './pages/facilitator/facilitator.module';
     GeneralPagesModule,
     CourseModule,
     FacilitatorModule,
+    ForumModule,
     LayoutModule,
     AppRoutingModule
   ],

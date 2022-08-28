@@ -1,0 +1,83 @@
+<div class="container mt-3 ms-3">
+    <div class="row me-2 forum-page-title">
+        <div class="col-12">
+            Add Forum
+        </div>
+    </div>
+    <div>
+        <div class="row me-2 mt-3">
+            <div class="col-12">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="row g-3">
+
+                        <div class="form-group col-md-6">
+                            <label for="name">Forum Name</label>
+                            <input 
+                                formControlName="name"
+                                id="name" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['name'].errors && f['name'].errors['required']">Forum Name is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="numberofstudents">Number of students</label>
+                            <input 
+                                formControlName="numberofstudents"
+                                id="numberofstudents" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['numberofstudents'].touched && f['numberofstudents'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['numberofstudents'].errors && f['numberofstudents'].errors['required']">Number of students is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="course">Course</label>
+                            <input 
+                                formControlName="course"
+                                id="course" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['course'].touched && f['course'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['course'].errors && f['course'].errors['required']">Course is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="facilitator">Facilitator</label>
+                            <input 
+                                formControlName="facilitator"
+                                id="facilitator" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['facilitator'].touched && f['facilitator'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['facilitator'].errors && f['facilitator'].errors['required']">Facilitator is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="startdate">Start Date</label>
+                            <input 
+                                formControlName="startdate"
+                                id="startdate" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['startdate'].touched && f['startdate'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['startdate'].errors && f['startdate'].errors['required']">Start Date is required.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group col-md-12">
+                            <a class="btn btn-outline-info float-start" [routerLink]="['../']">Cancel </a>
+                            <button class="btn btn-primary float-end" type="submit">Add Forum</button>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- end col-->
+        </div>
+        <!-- end row-->
+    </div>
+</div>

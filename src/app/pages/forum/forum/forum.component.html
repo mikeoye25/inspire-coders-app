@@ -1,0 +1,46 @@
+<div class="container mt-3 ms-3" *ngIf="isEmpty">
+    <div class="forum-page-title">
+        All Forums
+    </div>
+    <div>
+        <img src="../../../../assets/images/forums/empty-forum.png" class="img-fluid mx-auto d-block forum-page-image" alt="No forum image">
+    </div>
+    <div class="text-center mt-4">
+        <div class="forum-page-top">
+            No Forum added on the system
+        </div>
+        <div class="forum-page-mid">
+            Click the button below to add a Forum
+        </div>
+        <div class="mt-2">
+            <a class="btn btn-info justify-content-center text-center add-forum-btn" [routerLink]="addForumUrl">Add Forum </a>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 ms-3" *ngIf="!isEmpty">
+    <div class="row ms-2 me-2 forum-page-title">
+        <div class="col-6">
+            All Forums
+        </div>
+        <div class="col-6">
+            <a class="btn btn-info justify-content-center text-center float-end add-forum-btn" [routerLink]="addForumUrl">Add Forum </a>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- table start -->
+                        <app-advanced-table [tableData]="records" [columns]="columns" [pagination]="true"
+                            [pageSizeOptions]="pageSizeOptions" [hasRowSelection]="true" [isSearchable]="true"
+                            (search)="searchData($event)" [isSortable]="true" (sort)="onSort($event)">
+                        </app-advanced-table>
+                    </div> <!-- end card body-->
+                </div> <!-- end card -->
+            </div><!-- end col-->
+        </div>
+        <!-- end row-->
+    </div>
+</div>

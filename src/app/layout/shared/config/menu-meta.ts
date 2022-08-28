@@ -33,7 +33,7 @@ const MENU_ITEMS: MenuItem[] = [
         label: 'Forums',
         isTitle: false,
         icon: 'mdi mdi-forum-outline',
-        url: '/apps/chat',
+        url: '/pages/forum',
     },
 
     {
