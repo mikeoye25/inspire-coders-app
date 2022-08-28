@@ -13,7 +13,8 @@ import { Employee } from '../course-model';
 })
 export class CourseComponent implements OnInit {
 
-  isEmpty: boolean = false;
+  isEmpty: boolean = true;
+  public addCourseUrl: string = "add";
 
   records: Employee[] = [];
   columns: Column[] = [];

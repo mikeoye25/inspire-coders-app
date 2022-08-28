@@ -13,19 +13,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WeatherforecastComponent } from './weatherforecast/weatherforecast/weatherforecast.component';
-import { HomeComponent } from './general-pages/home/home.component';
-import { SignupComponent } from './general-pages/signup/signup.component';
-import { LoginComponent } from './general-pages/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
+import { GeneralPagesModule } from './general-pages/general-pages.module';
+import { CourseModule } from './pages/course/course.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherforecastComponent,
-    HomeComponent,
-    SignupComponent,
-    LoginComponent
+    WeatherforecastComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +35,8 @@ import { LayoutModule } from './layout/layout.module';
     MatListModule,
     MatButtonModule,
     NgbModule,
+    GeneralPagesModule,
+    CourseModule,
     LayoutModule,
     AppRoutingModule
   ],

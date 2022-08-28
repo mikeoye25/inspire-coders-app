@@ -21,19 +21,19 @@ const MENU_ITEMS: MenuItem[] = [
     },
 
     {
+        key: 'apps-contacts',
+        label: 'Facilitators',
+        isTitle: false,
+        icon: 'mdi mdi-book-open-page-variant-outline',
+        collapsed: true
+    },
+
+    {
         key: 'apps-chat',
         label: 'Forums',
         isTitle: false,
         icon: 'mdi mdi-forum-outline',
         url: '/apps/chat',
-    },
-
-    {
-        key: 'apps-contacts',
-        label: 'Tutors',
-        isTitle: false,
-        icon: 'mdi mdi-book-open-page-variant-outline',
-        collapsed: true
     },
 
     {
