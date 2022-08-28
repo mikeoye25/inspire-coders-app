@@ -20,7 +20,9 @@ export class CourseComponent implements OnInit {
   columns: Column[] = [];
   pageSizeOptions: number[] = [10, 25, 50, 100];
 
-  constructor (private eventService: EventService) { }
+  constructor (
+    // private eventService: EventService
+    ) { }
 
   ngOnInit(): void {
     // this.eventService.broadcast(EventType.CHANGE_PAGE_TITLE, {

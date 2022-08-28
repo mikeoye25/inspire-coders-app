@@ -17,6 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
 import { GeneralPagesModule } from './general-pages/general-pages.module';
 import { CourseModule } from './pages/course/course.module';
+import { FacilitatorModule } from './pages/facilitator/facilitator.module';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CourseModule } from './pages/course/course.module';
     NgbModule,
     GeneralPagesModule,
     CourseModule,
+    FacilitatorModule,
     LayoutModule,
     AppRoutingModule
   ],

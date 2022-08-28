@@ -1,33 +1,30 @@
 <div class="container mt-3 ms-3" *ngIf="isEmpty">
-    <div class="course-page-title">
-        All Courses
+    <div class="facilitator-page-title">
+        All Facilitators
     </div>
     <div>
-        <img src="../../../../assets/images/courses/empty-course.png" class="img-fluid mx-auto d-block course-page-image" alt="No course image">
+        <img src="../../../../assets/images/facilitators/empty-facilitator.png" class="img-fluid mx-auto d-block facilitator-page-image" alt="No facilitator image">
     </div>
     <div class="text-center mt-4">
-        <div class="course-page-top">
-            No Course added on the system
+        <div class="facilitator-page-top">
+            No Facilitator added on the system
         </div>
-        <div class="course-page-mid">
-            Click the button below to add a Course
+        <div class="facilitator-page-mid">
+            Click the button below to add a Facilitator
         </div>
         <div class="mt-2">
-            <a class="btn btn-info justify-content-center text-center add-course-btn" [routerLink]="addCourseUrl">Add Course </a>
-            <!-- <button type="button" class="btn btn-primary">Add Course</button> -->
+            <a class="btn btn-info justify-content-center text-center add-facilitator-btn" [routerLink]="addFacilitatorUrl">Add Facilitator </a>
         </div>
     </div>
 </div>
 
 <div class="container mt-3 ms-3" *ngIf="!isEmpty">
-    <div class="row ms-2 me-2 course-page-title">
+    <div class="row ms-2 me-2 facilitator-page-title">
         <div class="col-6">
-            All Courses
+            All Facilitators
         </div>
         <div class="col-6">
-            <!-- <a class="nav-link login-btn" [routerLink]="addCourseUrl">Add Course </a>
-            <button type="button" class="btn btn-primary float-end">Add Course</button> -->
-            <a class="btn btn-info justify-content-center text-center float-end add-course-btn" [routerLink]="addCourseUrl">Add Course </a>
+            <a class="btn btn-info justify-content-center text-center float-end add-facilitator-btn" [routerLink]="addFacilitatorUrl">Add facilitator </a>
         </div>
     </div>
     <div>

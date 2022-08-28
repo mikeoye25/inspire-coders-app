@@ -25,7 +25,7 @@ const MENU_ITEMS: MenuItem[] = [
         label: 'Facilitators',
         isTitle: false,
         icon: 'mdi mdi-book-open-page-variant-outline',
-        collapsed: true
+        url: '/pages/facilitator',
     },
 
     {
