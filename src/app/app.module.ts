@@ -16,16 +16,8 @@ import { WeatherforecastComponent } from './weatherforecast/weatherforecast/weat
 import { HomeComponent } from './general-pages/home/home.component';
 import { SignupComponent } from './general-pages/signup/signup.component';
 import { LoginComponent } from './general-pages/login/login.component';
-import { LayoutContainerComponent } from './layout/layout-container/layout-container.component';
-import { VerticalLayoutComponent } from './layout/vertical-layout/vertical-layout.component';
-import { HorizontalLayoutComponent } from './layout/horizontal-layout/horizontal-layout.component';
-import { TopbarComponent } from './layout/shared/topbar/topbar.component';
-import { LeftSidebarComponent } from './layout/shared/left-sidebar/left-sidebar.component';
-import { RightSidebarComponent } from './layout/shared/right-sidebar/right-sidebar.component';
-import { FooterComponent } from './layout/shared/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from './layout/layout.module';
-import { StatisticsWidget1Component } from './shared/widget/statistics-widget1/statistics-widget1.component';
 
 @NgModule({
   declarations: [

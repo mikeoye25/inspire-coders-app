@@ -1,1 +1,46 @@
-<p>course works!</p>
+<div class="container mt-3 ms-3" *ngIf="isEmpty">
+    <div class="course-page-title">
+        All Courses
+    </div>
+    <div>
+        <img src="../../../../assets/images/courses/No course.png" class="img-fluid mx-auto d-block course-page-image" alt="No course image">
+    </div>
+    <div class="text-center mt-4">
+        <div class="course-page-top">
+            No Course added on the system
+        </div>
+        <div class="course-page-mid">
+            Click the button below to add a Course
+        </div>
+        <div class="mt-2">
+            <button type="button" class="btn btn-primary">Add Course</button>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 ms-3" *ngIf="!isEmpty">
+    <div class="row ms-2 me-2 course-page-title">
+        <div class="col-6">
+            All Courses
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-primary float-end">Add Course</button>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- table start -->
+                        <app-advanced-table [tableData]="records" [columns]="columns" [pagination]="true"
+                            [pageSizeOptions]="pageSizeOptions" [hasRowSelection]="true" [isSearchable]="true"
+                            (search)="searchData($event)" [isSortable]="true" (sort)="onSort($event)">
+                        </app-advanced-table>
+                    </div> <!-- end card body-->
+                </div> <!-- end card -->
+            </div><!-- end col-->
+        </div>
+        <!-- end row-->
+    </div>
+</div>
