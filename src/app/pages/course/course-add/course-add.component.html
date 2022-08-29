@@ -1,0 +1,85 @@
+<div class="container mt-3 ms-3">
+    <div class="row me-2 course-page-title">
+        <div class="col-12">
+            Add Course
+        </div>
+    </div>
+    <div>
+        <div class="row me-2 mt-3">
+            <div class="col-12">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="row g-3">
+
+                        <div class="form-group col-md-6">
+                            <label for="title">Title</label>
+                            <input 
+                                formControlName="title"
+                                id="title" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['title'].touched && f['title'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['title'].errors && f['title'].errors['required']">Title is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="code">Code</label>
+                            <input 
+                                formControlName="code"
+                                id="code" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['code'].touched && f['code'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['code'].errors && f['code'].errors['required']">Code is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="instructor">Instructor</label>
+                            <input 
+                                formControlName="instructor"
+                                id="instructor" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['instructor'].touched && f['instructor'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['instructor'].errors && f['instructor'].errors['required']">Instructor is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="level">Level</label>
+                            <input 
+                                formControlName="level"
+                                id="level" 
+                                type="text" 
+                                class="form-control">
+                            <div *ngIf="f['level'].touched && f['level'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['level'].errors && f['level'].errors['required']">Level is required.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="description">Description</label>
+                            <textarea 
+                                formControlName="description"
+                                id="description" 
+                                type="text" 
+                                rows="5" 
+                                class="form-control">
+                            </textarea>
+                            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['description'].errors && f['description'].errors['required']">Description is required.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group col-md-12">
+                            <a class="btn btn-outline-info float-start" [routerLink]="['../']">Cancel </a>
+                            <button class="btn btn-primary float-end" type="submit">Add Course</button>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- end col-->
+        </div>
+        <!-- end row-->
+    </div>
+</div>

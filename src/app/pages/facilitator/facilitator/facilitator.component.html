@@ -1,0 +1,46 @@
+<div class="container mt-3 ms-3" *ngIf="isEmpty">
+    <div class="facilitator-page-title">
+        All Facilitators
+    </div>
+    <div>
+        <img src="../../../../assets/images/facilitators/empty-facilitator.png" class="img-fluid mx-auto d-block facilitator-page-image" alt="No facilitator image">
+    </div>
+    <div class="text-center mt-4">
+        <div class="facilitator-page-top">
+            No Facilitator added on the system
+        </div>
+        <div class="facilitator-page-mid">
+            Click the button below to add a Facilitator
+        </div>
+        <div class="mt-2">
+            <a class="btn btn-info justify-content-center text-center add-facilitator-btn" [routerLink]="addFacilitatorUrl">Add Facilitator </a>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 ms-3" *ngIf="!isEmpty">
+    <div class="row ms-2 me-2 facilitator-page-title">
+        <div class="col-6">
+            All Facilitators
+        </div>
+        <div class="col-6">
+            <a class="btn btn-info justify-content-center text-center float-end add-facilitator-btn" [routerLink]="addFacilitatorUrl">Add facilitator </a>
+        </div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- table start -->
+                        <app-advanced-table [tableData]="records" [columns]="columns" [pagination]="true"
+                            [pageSizeOptions]="pageSizeOptions" [hasRowSelection]="true" [isSearchable]="true"
+                            (search)="searchData($event)" [isSortable]="true" (sort)="onSort($event)">
+                        </app-advanced-table>
+                    </div> <!-- end card body-->
+                </div> <!-- end card -->
+            </div><!-- end col-->
+        </div>
+        <!-- end row-->
+    </div>
+</div>

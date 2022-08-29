@@ -1,0 +1,40 @@
+.banner{
+    background: #F2F6FB;
+}
+
+a:hover {
+    color: #000000;
+}
+
+.banner-text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.login-btn {
+    width: 100px;
+    text-align:center;
+    color: #567DF4;
+    box-sizing: border-box;
+    background: rgba(86, 125, 244, 0.1);
+    border-radius: 10px;
+}
+
+.form-top{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 31px;
+    color: #1B1B25;
+}
+
+.form-mid{
+    width: 80%;
+}

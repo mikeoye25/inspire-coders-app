@@ -1,0 +1,144 @@
+
+<div class="row min-vh-100">
+    <div class="col-md-6 d-none d-md-block p-5 banner">
+        <div class="mb-5 banner-text">Inspire Coders</div>
+        <div class="mt-5">
+            <img class="img-fluid" src="../../../assets/images/sigup-banner.png">
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- <a class="navbar-brand img-logo" href="#">Inspire Coders</a> -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNav"
+                    aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapseNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item pe-4">
+                        <a class="nav-link" [routerLink]="homeUrl">Home </a>
+                        </li>
+                        <li class="nav-item pe-4">
+                        <a class="nav-link" href="#">About </a>
+                        </li>
+                        <li class="nav-item pe-4 how-it-works">
+                        <a class="nav-link" href="#">How It Works </a>
+                        </li>
+                        <li class="nav-item pe-4">
+                        <a class="nav-link" href="#">Contact </a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link login-btn" [routerLink]="loginUrl">Login </a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+            <div class="p-4 ms-5">
+                <div class="form-top">
+                    Add your Information to Register
+                </div>
+                <div class="form-mid">
+                    <form [formGroup]="form" (ngSubmit)="submit()">
+                        <div class="row g-3">
+
+                            <div class="form-group col-md-6">
+                                <label for="firstname">First Name</label>
+                                <input 
+                                    formControlName="firstname"
+                                    id="firstname" 
+                                    type="text" 
+                                    class="form-control">
+                                <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['firstname'].errors && f['firstname'].errors['required']">First Name is required.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                                <label for="lastname">Last Name</label>
+                                <input 
+                                    formControlName="lastname"
+                                    id="lastname" 
+                                    type="text" 
+                                    class="form-control">
+                                <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">Last name is required.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                                <label for="email">Email Address</label>
+                                <input 
+                                    formControlName="email"
+                                    id="email" 
+                                    type="text" 
+                                    class="form-control">
+                                <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                                    <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="username">Username</label>
+                                <input 
+                                    formControlName="username"
+                                    id="username" 
+                                    type="text" 
+                                    class="form-control">
+                                <div *ngIf="f['username'].touched && f['username'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['username'].errors && f['username'].errors['required']">Name is required.</div>
+                                    <div *ngIf="f['username'].errors && f['username'].errors['minlength']">Username should not be lesser than 3 character.</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="password">Password</label>
+                                <input 
+                                    formControlName="password"
+                                    id="password" 
+                                    type="text" 
+                                    class="form-control">
+                                <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                                    <div *ngIf="f['password'].errors && f['password'].errors['minlength']">Password should not be lesser than 6 character.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input 
+                                    formControlName="confirmPassword"
+                                    id="confirmPassword" 
+                                    type="text" 
+                                    class="form-control">
+                                <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="alert alert-danger">
+                                    <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Confirm Password is required.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group col-md-6 mt-4">
+                                <input type="checkbox" 
+                                    formControlName="acceptTerms" 
+                                    class="form-check-input me-2" 
+                                    [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" /> 
+                                <label for="acceptTerms" class="form-check-label">I accept the terms</label>
+                                <div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback">
+                                    Accept Terms is required
+                                </div>
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                                <button class="btn btn-primary float-end" [disabled]="form.invalid" type="submit">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
