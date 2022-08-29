@@ -1,0 +1,94 @@
+
+<div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand ps-3" href="#">Inspire Coders</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNav"
+            aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapseNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item ps-3">
+                <a class="nav-link" href="#">Home </a>
+              </li>
+              <li class="nav-item ps-3">
+                <a class="nav-link" href="#">About </a>
+              </li>
+              <li class="nav-item ps-3 how-it-works">
+                <a class="nav-link" href="#">How It Works </a>
+              </li>
+              <li class="nav-item ps-3">
+                <a class="nav-link" href="#">Contact </a>
+              </li>
+              <li class="nav-item ps-3">
+                <a class="nav-link signup-btn" [routerLink]="signupUrl">Signup </a>
+              </li>
+              <li class="nav-item ps-3">
+                <a class="nav-link login-btn" [routerLink]="loginUrl">Login </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="row m-2">
+      <div class="col-12 mt-3">
+        <div class="banner-section-text-top">
+
+            <div class="container" *ngIf="isEmpty">
+                <div class="forum-page-title">
+                    No Forums yet
+                </div>
+                <div>
+                    <img src="../../../../assets/images/forums/empty-forum.png" class="img-fluid mx-auto d-block forum-page-image" alt="No forum image">
+                </div>
+                <div class="text-center mt-4">
+                  No Forums yet
+                </div>
+            </div>
+
+            <div class="container" *ngIf="!isEmpty">
+                <div class="row mb-2 forum-page-title">
+                    <div class="col-12">
+                        Forums
+                    </div>
+                </div>
+                <div>
+                    <div class="row" *ngFor="let record of records">
+                      <div class="col-md-12 col-sm-6">
+                        <div class="card bg-light">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              <a href="#">{{ record.coursename }}</a>
+                            </h5>
+                            <p class="card-text">Facilitated by {{ record.facilitatorname }}</p>
+                            <div>
+                              Starts on {{ record.startdate }}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end row-->
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="mt-5 p-3 bg-light upcoming-forum-footer">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+          <span>© 2022 Imprinno Solutions. All rights reserved.  Terms & Conditions | Privacy Policy</span>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <span class="text-muted">logos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  

@@ -1,0 +1,38 @@
+.navbar-nav > li{
+    padding-right:15px;
+}
+
+a:hover {
+    color: #000000;
+}
+
+.how-it-works {
+    width: 150px;
+}
+
+.login-btn {
+    width: 145px;
+    height: 37px;
+    text-align:center;
+    box-sizing: border-box;
+    background: #68BCFD;
+    border-radius: 10px;
+    color: white;
+}
+
+.signup-btn {
+    width: 145px;
+    height: 37px;
+    margin-bottom: 10px;
+    text-align:center;
+    box-sizing: border-box;
+    background: rgba(86, 125, 244, 0.1);
+    border-radius: 10px;
+    color: #567DF4;
+}
+
+.upcoming-forum-footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
