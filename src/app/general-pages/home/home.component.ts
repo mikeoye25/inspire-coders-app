@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
 
   public signupUrl: string = "/signup";
   public loginUrl: string = "/login";
+  public howitworkUrl: string ="/cc";
 
   constructor() { }
 

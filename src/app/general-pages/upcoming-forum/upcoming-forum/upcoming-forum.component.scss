@@ -1,0 +1,31 @@
+$color-primary-red: #dc3545;
+$color-secondary-gray: rgb(112, 112, 112);
+$color-light-grey: #C59A6F;
+
+.heading-primary {
+  color: $color-primary-red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.heading-secondary {
+  color: #333333;
+}
+
+.inset-line {
+  color: $color-secondary-gray;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.long-copy {
+  color: $color-light-grey;
+  font-weight: bold;
+}
+
+
+.upcoming-forum-footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}

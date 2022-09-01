@@ -6,12 +6,18 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UpcomingForumComponent } from './upcoming-forum/upcoming-forum/upcoming-forum.component';
+import { UpcomingForumDetailComponent } from './upcoming-forum/upcoming-forum-detail/upcoming-forum-detail.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    UpcomingForumComponent,
+    UpcomingForumDetailComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +30,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   exports: [
     HomeComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    UpcomingForumComponent,
+    UpcomingForumDetailComponent
   ]
 })
 export class GeneralPagesModule { }
