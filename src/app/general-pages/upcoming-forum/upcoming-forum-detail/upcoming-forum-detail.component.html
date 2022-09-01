@@ -1,39 +1,8 @@
 
 <div class="row">
     <div class="col">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-        <div class="container-fluid">
-          <a class="navbar-brand ps-3" href="#">Inspire Coders</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNav"
-            aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapseNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item ps-3">
-                <a class="nav-link" href="#">Home </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link" href="#">About </a>
-              </li>
-              <li class="nav-item ps-3 how-it-works">
-                <a class="nav-link" href="#">How It Works </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link" href="#">Contact </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link signup-btn" [routerLink]="signupUrl">Signup </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link login-btn" [routerLink]="loginUrl">Login </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+     <app-header></app-header>
     </div>
-
     <div class="row m-2">
       <div class="col-12 mt-3">
         <div class="banner-section-text-top">
@@ -41,38 +10,92 @@
             <div class="container">
                 <div>
                     <div>
-                        Managing Software in Linux with Debian Software Management
+                       <h1 class="fw-bold mb-2 paragraph">
+                        {{description}}
+                        <br class="hiddex-xs" />
+                        Software Management
+                     </h1>
+                    </div>
+                    <div class="container-fluid">
+                       <p class="lead mb-2 inset">{{ facilitation }}</p>
+                       <p class="lead retro lh-base">
+                        Managing Software in Linux with Debian Software Management is the course to boost your ability in 
+                        <br class="hidden-xs" />
+                        managing Debian and Ubuntu systems. By the end of the course you will understand how to use 
+                        <br class="hidden-xs"/>
+                        software management to streamline your systems.
+                       </p>
+                    </div>
+                    <div> 
                     </div>
                     <div>
-                        Facilitated by Andrew Mallett
-                    </div>
-                    <div>
-                        Course Description Here
-                    </div>
-                    <div>
-                        place button to join forum here 
-                        <!-- login to join, join to discuss, discuss  -->
+                      <Button type="button" class="btn btn-outline-secondary mb-3">
+                        <i class="bi bi-play-fill"></i>
+                        PREVIEW THIS COURSE
+                      </Button>
+                      <div class="container mt-5">
+                        <h1 class="fs-20">What you'll learn</h1>
+                        <p class="lead retro mt-3 lh-base">
+                          Many courses and books cover software management in Debian based systems, but few cover it in depth.
+                          <br class="hidden-xs" />
+                          In this course, Managing Software in Linux with Debian Software Management, you will learn 
+                          <br class="hidden-xs" />
+                          foundational knowledge of using Debian packaging tools, from the basics through to creating binary 
+                          <br class="hidden-xs" />
+                          packages. First, you will be taught the basics of the command dpkg. Next, you will discover how to use 
+                          <br class="hidden-xs" />
+                          apt to help you locate and manage software. Finally, you will explore how to create your own Debian 
+                          <br class="hidden-xs" />
+                          package. When you're finished with this course, you will have the skills and knowledge of Debian software 
+                          <br clsss="hiddenx-xs" />
+                          management needed to manage your enterprise Linux systems.
+                        </p>
+                      </div>
                     </div>
                 </div>
                 <div>
                     <div>
-                        About the facilitator
+                      <h1 class="fw-bold mt-5 mb-3 paragraph">About the Facilitator</h1>
                     </div>
-                    <div>
-                        Andrew Mallett
+                    <div class="container">
+                      <div class="row row-cols-auto justify-content-left">
+                        <div class="col">
+                          <img src="../../../../assets/images/users/user-6.jpg" class="rounded-circle float-start" style="width: 70px; height: 70px;" alt="..." />
+                        </div>
+                        <div class="col">
+                          <h6 class="mb-3 mt-3 fs-15 inset">Andrew Mallett</h6>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                        More details about the facilitator
+                    <div class="container-fluid">
+                      <p class="lead mt-3 mb-3 lh-base retro">
+                        Andrew is an all around Linux professional with in depth knowledge of the OS and this is supported with 
+                        <br class="hidden-xs" />
+                        scripting in bash, perl python and ruby and application development in C, C++ and Java. Having worked 
+                        <br class="hidden-xs" />
+                        for many years in training, Andrew has developed automated course build systems after endless time 
+                        <br class="hidden-xs" />
+                        wasted on Friday nights. The first build system he built was aptly named "Friday nights,"This has inspired 
+                        <br class="hidden-xs" />
+                        his interest in all things deployment related. He has authored training courses on M...<a href="#" class="font-bold psyck">more</a>
+                      </p>
+                      <h6 class="font-bold retro fs-15">
+                        See more courses by Andrew Mallett<span style="color: #dc3545;"><i class="bi bi-chevron-right"></i></span>
+                      </h6>
                     </div>
                 </div>
+                <div class="d-grid gap-2">
+                  <Button class="btn btn-primary mt-3 mb-5 fs-15 float-end" type="button">
+                    Ready to upskill?
+                  </Button>
+                </div>
             </div>
-
         </div>
       </div>
     </div>
 </div>
   
-<footer class="mt-5 p-3 bg-light upcoming-forum-footer">
+ <footer class="mt-5 p-3 bg-light upcoming-forum-footer">
     <div class="container text-center">
         <div class="row">
             <div class="col-md-8 col-sm-12 col-xs-12">
@@ -84,4 +107,3 @@
         </div>
     </div>
 </footer>
-  

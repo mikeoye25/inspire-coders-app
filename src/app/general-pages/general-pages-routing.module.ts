@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'forum', component: UpcomingForumComponent },
+  { path: 'cc', component: UpcomingForumComponent },
   { path: 'forum/:id', component: UpcomingForumDetailComponent }
 ];
 

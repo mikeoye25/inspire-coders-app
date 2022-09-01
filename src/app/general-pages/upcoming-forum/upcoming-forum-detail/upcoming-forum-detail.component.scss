@@ -1,34 +1,23 @@
-.navbar-nav > li{
-    padding-right:15px;
+$color-primary-red: #dc3545;
+$color-secondary-gray: rgb(112, 112, 112);
+$color-light-grey: #C59A6F;
+
+.paragraph {
+  color: $color-primary-red;
 }
 
-a:hover {
-    color: #000000;
+.inset {
+  color: $color-secondary-gray;
+  font-size: 15px;
 }
 
-.how-it-works {
-    width: 150px;
+.retro {
+  color: $color-secondary-gray;
+  font-size: 17px;
 }
 
-.login-btn {
-    width: 145px;
-    height: 37px;
-    text-align:center;
-    box-sizing: border-box;
-    background: #68BCFD;
-    border-radius: 10px;
-    color: white;
-}
-
-.signup-btn {
-    width: 145px;
-    height: 37px;
-    margin-bottom: 10px;
-    text-align:center;
-    box-sizing: border-box;
-    background: rgba(86, 125, 244, 0.1);
-    border-radius: 10px;
-    color: #567DF4;
+.psyck {
+  color: $color-primary-red;
 }
 
 .upcoming-forum-footer{

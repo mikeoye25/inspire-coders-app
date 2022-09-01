@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpcomingForumComponent } from './upcoming-forum/upcoming-forum/upcoming-forum.component';
 import { UpcomingForumDetailComponent } from './upcoming-forum/upcoming-forum-detail/upcoming-forum-detail.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UpcomingForumDetailComponent } from './upcoming-forum/upcoming-forum-de
     SignupComponent,
     LoginComponent,
     UpcomingForumComponent,
-    UpcomingForumDetailComponent
+    UpcomingForumDetailComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

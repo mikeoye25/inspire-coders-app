@@ -10,9 +10,7 @@ import { UpcomingForum } from '../upcoming-forum-model';
 export class UpcomingForumComponent implements OnInit {
 
   isEmpty: boolean = false;
-
-  public signupUrl: string = "/signup";
-  public loginUrl: string = "/login";
+  public forumidUrl: string = "/forum/:id"
 
   records: UpcomingForum[] = [];
 

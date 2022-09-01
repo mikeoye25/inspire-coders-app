@@ -1,37 +1,7 @@
 
 <div class="row">
     <div class="col">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-        <div class="container-fluid">
-          <a class="navbar-brand ps-3" href="#">Inspire Coders</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNav"
-            aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapseNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item ps-3">
-                <a class="nav-link" href="#">Home </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link" href="#">About </a>
-              </li>
-              <li class="nav-item ps-3 how-it-works">
-                <a class="nav-link" href="#">How It Works </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link" href="#">Contact </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link signup-btn" [routerLink]="signupUrl">Signup </a>
-              </li>
-              <li class="nav-item ps-3">
-                <a class="nav-link login-btn" [routerLink]="loginUrl">Login </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <app-header></app-header>
     </div>
     <div class="row m-2">
       <div class="col-12 mt-3">
@@ -52,7 +22,7 @@
             <div class="container" *ngIf="!isEmpty">
                 <div class="row mb-2 forum-page-title">
                     <div class="col-12">
-                        Forums
+                      <h1 class="heading-secondary">Forums</h1>
                     </div>
                 </div>
                 <div>
@@ -60,12 +30,12 @@
                       <div class="col-md-12 col-sm-6">
                         <div class="card bg-light">
                           <div class="card-body">
-                            <h5 class="card-title">
-                              <a href="#">{{ record.coursename }}</a>
+                            <h5 class="card-title heading-primary">
+                              <a [routerLink]="forumidUrl">{{ record.coursename }}</a>
                             </h5>
-                            <p class="card-text">Facilitated by {{ record.facilitatorname }}</p>
+                            <p class="card-text inset-line">Facilitated by {{ record.facilitatorname }}</p>
                             <div>
-                              Starts on {{ record.startdate }}
+                             <p class="long-copy">Starts on {{ record.startdate }}</p>
                             </div>
                           </div>
                         </div>
